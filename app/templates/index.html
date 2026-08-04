@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My DevOps Project</title>
+{% extends "base.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+{% block content %}
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
+<div class="text-center">
 
-<body>
-
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">🚀 DevOps Learning</a>
-    </div>
-</nav>
-
-<div class="container text-center mt-5">
-
-    <h1 class="text-primary">Welcome to My DevOps Project</h1>
+    <h1 class="text-primary">Welcome to My DevOps Project 🚀</h1>
 
     <p class="lead">
         This website is built using Flask and Bootstrap.
@@ -32,38 +14,37 @@
         Learn DevOps
     </button>
 
-    <div class="row">
+</div>
 
-        <div class="col-md-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h3>🐍 Python</h3>
-                    <p>Backend development using Flask.</p>
-                </div>
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h3>🐍 Python</h3>
+                <p>Backend development using Flask.</p>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h3>⚙️ DevOps</h3>
-                    <p>Git, GitHub, Docker and CI/CD.</p>
-                </div>
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h3>⚙️ DevOps</h3>
+                <p>Git, GitHub, Docker and CI/CD.</p>
             </div>
         </div>
+    </div>
 
-        <div class="col-md-4">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h3>☁️ Cloud</h3>
-                    <p>AWS deployment coming soon.</p>
-                </div>
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h3>☁️ Cloud</h3>
+                <p>AWS deployment coming soon.</p>
             </div>
         </div>
-
     </div>
 
 </div>
 
-</body>
-</html>
+{% endblock %}
