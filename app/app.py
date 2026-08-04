@@ -1,6 +1,10 @@
-def main():
-    print("Welcome to My DevOps Project!")
-    print("This is a simple Python application.")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "<h1>Welcome to My DevOps Project 🚀</h1>"
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
