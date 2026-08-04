@@ -1,13 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact Us</h1>
-    <p>Email: devops@example.com</p>
+{% extends "base.html" %}
 
-    <a href="/">Home</a> |
-    <a href="/about">About</a>
-</body>
-</html>
+{% block content %}
+
+<h2 class="mb-4">Contact Us</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<label>Name</label>
+<input type="text" class="form-control" name="name" required>
+</div>
+
+<div class="mb-3">
+<label>Email</label>
+<input type="email" class="form-control" name="email" required>
+</div>
+
+<div class="mb-3">
+<label>Message</label>
+<textarea class="form-control" name="message" rows="5" required></textarea>
+</div>
+
+<button class="btn btn-primary">
+Submit
+</button>
+
+</form>
+
+{% endblock %}
